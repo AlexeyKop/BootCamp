@@ -17,7 +17,7 @@ cap = cv2.VideoCapture(0)
 
 while True:
     _, frame = cap.read()
-    # cv2.imshow('camera', frame)
+    # cv2.imshow('preview', frame)
     img_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     faces = face_cascades.detectMultiScale(img_gray)
 
