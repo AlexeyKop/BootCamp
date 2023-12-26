@@ -6,7 +6,13 @@
     <title>{{title}}</title>
 </head>
 <body>
-    <h1>Hello, world!</h1>
-    <a href="/student">Список студентов</a>
+    
+<h3>List of student on seminar:</h3><br>
+<ol><!-- маркированный список -->
+    {% for row in s %}
+        <li> <b>{{ row }}</b></li>
+    {% endfor %}
+
+</ol>
 </body>
 </html>

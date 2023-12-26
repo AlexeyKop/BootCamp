@@ -10,13 +10,15 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template('index.html')
+    return render_template('index.html', title = 'Главная страница')
 
 
 
-@app.route("/info")
+@app.route("/student")
 def info():
-    return "<h1>GEEKBRAINS</h1>"
+    list_std = ['Саша', 'Masha', 'Petya', 'Robert', 'Alex']
+    return render_template ('list_student.html', s = list_std, 
+                            title = 'Online')
 
 
 
